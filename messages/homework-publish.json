@@ -1,5 +1,0 @@
-{
-  "messageType": "[Announcement]",
-  "messageSummary": "<strong>${teacherName}</strong> has made an announcement in <strong>${couseName}</strong>",
-  "messageContent": "<p style=\"margin:0;\">Title：<strong>${title}</strong></p>\n<p style=\"margin:0;\">Posted on：<strong>${time}</strong></p>\n<p style=\"margin:0;\">Content：${content}</p>"
-}
