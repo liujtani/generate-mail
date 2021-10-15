@@ -10,6 +10,9 @@ const output = Path.join(__dirname, 'dist')
 
 const getMessages = async () => {
   const path = Path.join(__dirname, 'messages')
+  if (!fs.existsSync(path)) {
+    return []
+  }
   const files = await fs.promises.readdir(path, { withFileTypes: true })
   const messages = []
   for (let file of files) {
