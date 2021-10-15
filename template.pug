@@ -1,0 +1,37 @@
+div(style="max-width: 640px; min-width: 320px; padding: 20px; font-size: 14px; margin: 0 auto;")
+  //- 正文
+  div(style="border-bottom: 1px solid #e3e3e9;padding: 0 0 40px 0;")
+    //- logo
+    a(href=logoLink, target="_blank", rel="noopener noreferrer" style="display: block; height: 74px; background-color: #e4e9ef; text-align: center; margin: 0 0 30px 0;") 
+      img(src=logoIcon, alt=logoAlt height=40 style="height: 40px; padding: 17px 0;")    
+    //- message type
+    p(style="font-size: 20px; line-height: 28px; font-weight: 600; margin: 0 0 30px;")
+      strong #{messageType}
+    //- Dear user
+    p(style="line-height: 21px; font-weight: 600; margin: 0 0 16px;")
+      strong #{user}
+    //- message header
+    div(style="line-height: 21px; margin: 0 0 30px;") !{messageSummary}
+    //- message content
+    div(style="line-height: 21px; margin: 0;") !{messageContent}
+    //- join link
+    a(href="${openLink}", style="background-color: #ea5947; background-image: linear-gradient(46deg, #EA5947 0%, #F97652 100%); line-height: 20px;margin: 40px 0;text-decoration: none; display: block; border-radius: 4px; overflow: hidden; width: 283px;")
+      table(border=0, style="border: none; border-collapse: collapse; width: 100%;")
+        tbody
+          tr(style="height: 44px;")
+            td(style="text-align: left; padding: 0 0 0 20px; color: #fff;") Open
+            td(style="letter-spacing: 0; text-align: right; padding: 0 20px 0 0; color: #fff;")
+              img(src=rightArrowIcon)
+    a(href="${openLink}", style="line-height: 21px; color: #529FFF; text-decoration: none;") ${openLink}
+  //- 署名
+  div(style="margin: 40px 0 48px; line-height: 21px; color: #969696")
+    p(style="margin: 0") Ulearning Team
+    p(style="margin: 0") Thank you for using ULearning Learning Management System.
+  //- 退订
+  div(style="padding: 30px 0 40px; font-size: 12px; line-height: 16px; text-align: center; font-weight: 400; color: #969696; background-color: #eff0f1")
+    p(style="margin: 0") This is a system generated email, do not reply to this email
+    p(style="margin: 0") If you no longer wish to receive these emails. click to 
+      a(href="${unsubscribeLink}", style="color: #969696") unsubscribe
+    p(style="margin: 0; height: 16px;")
+    p(style="margin: 0;")
+      a(href="${homeLink}", style="color: #969696;") ${homeLink)
