@@ -41,7 +41,7 @@ const rm = async (path) => {
 }
 
 const globalData = {
-  user: 'Dear, ${user}',
+  user: 'Hi, ${user}',
   logoLink: '${logoLink}',
   logoIcon: '${logo}',
   logoAlt: '${logoAlt}',
