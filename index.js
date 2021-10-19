@@ -57,7 +57,7 @@ const globalData = {
   await fs.promises.mkdir(output)
   const messages = await getMessages()
   for(const message of messages) {
-    const html = compiledFunction(Object.assign(globalData, message.data))
+    const html = compiledFunction(Object.assign({}, globalData, message.data))
     await fs.promises.writeFile(Path.join(output, message.name + '.html'), html, 'utf-8')
   }
 })()
