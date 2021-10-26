@@ -55,7 +55,7 @@ const globalData = {
   noticeLink: '${noticeLink}',
   homeLink: '${homeLink}',
   rightArrowIcon: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAdUlEQVRIie2UOw5AUBBF79P5lLagtwgJnY6dKSxDrWFbJEelEZUYQt4pJ5N7iplcyeM5AyiAHgitBCWwAiMQWUkaYAEmIPmFZH5F4g6LnaTsoieXlEoanHP1Pgwuhj0L0Jod2zrc7k0P4fHd4ZVpVZiXnedbbIpkpU4/wM0hAAAAAElFTkSuQmCC`,
-  schoolLogoAlt: 'school',
+  schoolLogoAlt: '${schoolLogoAlt}',
   schoolLogo: '${schoolLogo}'
 }
 
