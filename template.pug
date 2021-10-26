@@ -2,10 +2,17 @@ div(style="max-width: 640px; min-width: 320px; padding: 20px 20px 0; font-size: 
   //- 正文
   div(style="border-bottom: 1px solid #e3e3e9;padding: 0 0 30px 0;")
     //- logo
-    a(href=logoLink, target="_blank", rel="noopener noreferrer" style="display: block; height: 74px; background-color: #e4e9ef; text-align: center; margin: 0 0 30px 0;") 
-      img(src=logoIcon, alt=logoAlt height=40 style="height: 40px; padding: 17px 0;")    
+    a(href=logoLink target="_blank" rel="noopener noreferrer" style="display: block; height: 74px; background-color: #e4e9ef; text-align: center; margin: 0 0 15px 0;") 
+      img(src=logoIcon, alt=logoAlt height=40 style="height: 40px; padding: 17px 0;")
+    if schoolLink
+      a(href=schoolLink target="_blank" rel="noopener noreferrer" style="display: block;")
+        div(style="padding: 0 0 10px 0;")
+          img(src=schoolLogo alt=schoolLogoAlt height=50 style="object-fit: cover;" )
+    else
+      div(style="padding: 0 0 10px 0;")
+        img(src=schoolLogo alt=schoolLogoAlt height=50 style="object-fit: cover;" )
     //- message type
-    p(style="font-size: 20px; line-height: 28px; font-weight: 600; margin: 0 0 30px;")
+    p(style="font-size: 20px; line-height: 28px; font-weight: 600; margin: 0 0 20px;")
       strong #{messageType}
     //- Dear user
     p(style="line-height: 21px; font-weight: 600; margin: 0 0 16px;")

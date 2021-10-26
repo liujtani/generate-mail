@@ -32,11 +32,18 @@ const rm = async (path) => {
   const stat = await fs.promises.stat(path)
   if (stat.isDirectory()) {
     for (const file of await fs.promises.readdir(path)) {
-      await rm(Path.join(path, file))
+      await clearDir(Path.join(path, file))
     }
     await fs.promises.rmdir(path)
   } else {
     await fs.promises.unlink(path)
+  }
+}
+
+const clearDir = async (path) => {
+  const files = await fs.promises.readdir(path)
+  for (const file of files) {
+    await rm(Path.join(path, file))
   }
 }
 
@@ -48,13 +55,16 @@ const globalData = {
   noticeLink: '${noticeLink}',
   homeLink: '${homeLink}',
   rightArrowIcon: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAdUlEQVRIie2UOw5AUBBF79P5lLagtwgJnY6dKSxDrWFbJEelEZUYQt4pJ5N7iplcyeM5AyiAHgitBCWwAiMQWUkaYAEmIPmFZH5F4g6LnaTsoieXlEoanHP1Pgwuhj0L0Jod2zrc7k0P4fHd4ZVpVZiXnedbbIpkpU4/wM0hAAAAAElFTkSuQmCC`,
+  schoolLogoAlt: 'school',
+  schoolLogo: '${schoolLogo}'
 }
 
 ;(async () => {
   if (fs.existsSync(output)) {
-    await rm(output)
+    await clearDir(output)
+  } else {
+    await fs.promises.mkdir(output)
   }
-  await fs.promises.mkdir(output)
   const messages = await getMessages()
   for(const message of messages) {
     message.data = message.data || {}
